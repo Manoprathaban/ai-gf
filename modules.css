@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #ffccd5, #ffe0ec);
+  color: #3e3e3e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.valentine-hearts {
+  width: 100%;
+  height: 100px;
+  background: url('https://media.giphy.com/media/l0MYrzcWP7Jx3dXmU/giphy.gif') center/contain no-repeat;
+  animation: floatHearts 3s ease-in-out infinite;
+  margin-top: 20px;
+}
+
+@keyframes floatHearts {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+h1 {
+  margin-top: 20px; 
+  font-size: 3em;
+  color: #b3005e;
+  align-items: center;
+  display:center;
+  margin-left:15px;
+
+}
+
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.module-card {
+  background: #fff0f6;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.module-card h2 {
+  color: #cc0066;
+  margin-bottom: 10px;
+}
+
+.module-card p {
+  font-size: 0.95em;
+  color: #5a5a5a;
+}
+
+.back-link {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #b3005e;
+  background: #fff0f6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease;
+}
+
+.back-link:hover {
+  background: #ffdce5;
+}
+
+.gif-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display:center;
+  width:500px;
+
+}
+.gif-container img{
+  width:100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition:transform 0.3s ease;
+  display:center;
+  margin-right:500px;
+}
+.gif-container img:hover {
+  transform: scale(1.03);
+}
+
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ff1493;
+}

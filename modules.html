@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modules</title>
+  <link rel="stylesheet" href="modules.css">
+</head>
+<body>
+    <div class="back-button-container">
+    <button class="back-button" onclick="goBack()">← Back</button>
+  </div>
+
+  <div class="modules-container">
+    <h1>💕Seraphina Awaits💕💕</h1>
+  <div class="gif-container">
+    <img src="images/seraphina.gif" alt="You look lonely, I can fix that">
+  </div>
+
+    <div class="modules-grid">
+      <div class="module-card" data-target="chat.html">
+        <h2>💬 Chat</h2>
+        <p>Talk to your AI partner in different moods.</p>
+      </div>
+
+      <div class="module-card" data-target="lubConnect.html">
+        <h2>💞 Compatibility Quiz</h2>
+        <p>Find out how compatible you and your partner are!</p>
+      </div>
+
+      <div class="module-card" data-target="date.html">
+        <h2>🌸 Date Simulation</h2>
+        <p>Go on a virtual date in sweet, tsundere, or even dark styles!</p>
+      </div>
+
+      <div class="module-card" data-target="logout.html">
+        <h2>🚪 Logout</h2>
+        <p>Log out of your romantic journey 💖</p>
+      </div>
+    </div>
+  </div>
+
+   <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <script src="modules.js"></script>
+</body>
+</html>

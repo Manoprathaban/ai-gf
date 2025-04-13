@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Simulation</title>
+    <link rel="stylesheet" href="date.css">
+</head>
+<body>
+
+<div class="back-button-container">
+  <button class="back-button" onclick="goBack()">← Back</button>
+</div>
+
+<div class="container">
+    <div class="valentine-hearts"></div>
+    <h1>💕 Welcome to GFAI</h1>
+    <h1>Simulate Your Date</h1>
+
+    <label for="scenario">Choose a scenario:</label>
+    <input type="text" id="scenario" placeholder="e.g., beach walk, coffee shop date">
+
+    <label for="mode">Choose a mode:</label>
+    <select id="mode">
+        <option value="sweet">Sweet</option>
+        <option value="dark">Dark</option>
+        <option value="tsundere">Tsundere</option>
+        <option value="party">Party</option>
+        <option value="orthodox">Orthodox</option>
+    </select>
+
+    <button id="simulateBtn">Simulate Date</button>
+
+    <div class="response" id="response">
+        <!-- Response will appear here -->
+    </div>
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+
+<script src="date.js"></script>
+</body>
+</html>

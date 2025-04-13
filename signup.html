@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GFAI143 - Couple Sign Up</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>🌹Blind date with💖Seraphina?</h2>
+    <p class="subtitle">Start a new love story together 💖</p>
+    <form onsubmit="signup(event)">
+      <input type="text" id="newPartner1" placeholder="Partner 1 Name" required />
+      <input type="text" id="newPartner2" placeholder="Partner 2 Name" />
+      <input type="password" id="newPassword" placeholder="Create Secret Code" required />
+      <button type="submit">💑 Sign Up</button>
+    </form>
+
+    <p id="signupMessage"></p>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
