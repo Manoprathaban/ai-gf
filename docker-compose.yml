@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword   # Set your root password here
+      MYSQL_DATABASE: gfai_db             # Your database name
+      MYSQL_USER: user                    # Your MySQL user
+      MYSQL_PASSWORD: userpassword        # Password for the user
+    ports:
+      - "3306:3306"   # Expose MySQL on host port 3306
+    volumes:
+      - mysql-data:/var/lib/mysql          # Persist data in case container restarts
+    networks:
+      - backend_network
+    restart: always
+
+  backend:
+    build: ./backend                       # Assuming you have a Dockerfile for your backend
+    container_name: backend-container
+    environment:
+      DATABASE_URL: "mysql+mysqlconnector://user:userpassword@mysql:3306/gfai_db"  # Adjust the DB URL with your details
+    ports:
+      - "8000:8000"                        # Expose backend on host port 8000
+    depends_on:
+      - mysql
+    networks:
+      - backend_network
+    restart: always
+
+networks:
+  backend_network:                        # Custom network to ensure communication between containers
+    driver: bridge
+
+volumes:
+  mysql-data:                             # Volume for MySQL data persistence

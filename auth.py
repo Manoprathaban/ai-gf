@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 router = APIRouter()
 
 # Connect to MySQL
-DATABASE_URL = "mysql+mysqlconnector://root:Mano%402001@db:3306/gfai_db"
+DATABASE_URL = "mysql+mysqlconnector://root:Mano%402001@localhost:3306/gfai_db"
 
 
 engine = create_engine(DATABASE_URL)
